@@ -6,9 +6,13 @@
 
 ### 参考资料
 
-同宿舍楼上一位学长的 [博文](https://www.bilibili.com/read/cv7832399?spm\_id\_from=333.999.0.0) 及 [GitHub 仓库](https://github.com/yllhwa/nfchello)
+- MFRC522 官方手册 [doc](https://www.nxp.com.cn/docs/en/data-sheet/MFRC522.pdf)
 
-他博客中引用的链接：[文章](https://zhuanlan.zhihu.com/p/66467989) 及 [GitHub 仓库](https://github.com/Ghastlcon/Access-Control)
+- 李乾文的博客 [RFID-RC522读IC卡](https://blog.csdn.net/leytton/article/details/73480974)
+
+- 同宿舍楼上一位学长的 [博文](https://www.bilibili.com/read/cv7832399?spm\_id\_from=333.999.0.0) 及 [GitHub 仓库](https://github.com/yllhwa/nfchello)
+
+- 他博客中引用的链接 [文章](https://zhuanlan.zhihu.com/p/66467989) 及 [GitHub 仓库](https://github.com/Ghastlcon/Access-Control)
 
 ### 材料准备
 
@@ -38,3 +42,16 @@
 	- **core** : arduino:avr 1.8.5
 	- **lib** : MFRC522 1.4.10
 
+- **Fritzing** 0.9.9 beta
+
+## 连线及原理图
+
+RC522 模块的库是网上找的，在连线图上标识不够清晰，可以参考原理图来布线。
+
+- 连线
+
+![连线](./drawing/smart-door.png)
+
+- 原理图
+
+![原理图](./drawing/smart-door_%E5%9B%BE%E7%A4%BA.png)
