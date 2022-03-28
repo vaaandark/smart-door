@@ -14,10 +14,10 @@ void setup() {
 	rfid.PCD_Init();
 }
 
-void printID(byte *uid_arr, byte size, byte format)
+void printID(byte *uid_arr, byte size, int base)
 {
 	for (byte i = 0; i < size; ++i)
-		Serial.print(uid_arr[i], format);
+		Serial.print(uid_arr[i], base);
 	Serial.println();
 }
 
