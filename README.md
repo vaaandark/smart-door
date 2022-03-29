@@ -55,3 +55,29 @@ RC522 模块的库是网上找的，在连线图上标识不够清晰，可以�
 - 原理图
 
 ![原理图](./drawing/smart-door_%E5%9B%BE%E7%A4%BA.png)
+
+## 配置及使用
+
+编译烧录运行`./src/get-id/get-id.ino`以获得卡的 UID。
+
+创建文件`./src/access-control/card-group.hpp`，添加如下代码：
+
+``` cpp
+#define CARD_NUM {卡的数量}
+#define UID_SIZE 4
+
+static const byte card_group[CARD_NUM][UID_SIZE] =
+{
+    { 0x00, 0x00, 0x00, 0x00 },
+    { 0x00, 0x00, 0x00, 0x00 },
+//    ...
+};
+```
+
+编译烧录`./src/access-control/access-control.ino`则可以使用这个简易门禁了！
+
+## 效果图
+
+连线完成的样子：
+
+![连线完成](./image/connected-device.jpg)
