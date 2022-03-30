@@ -78,6 +78,16 @@ static const byte card_group[CARD_NUM][UID_SIZE] =
 
 ## 效果图
 
-连线完成的样子：
+- 连线完成效果
 
 ![连线完成](./image/connected-device.jpg)
+
+- 安装完成效果
+
+![安装完成-1](./image/installed-device_1.jpg)
+
+![安装完成-2](./image/installed-device_2.jpg)
+
+- 使用效果
+
+![demo](./image/demo.gif)
