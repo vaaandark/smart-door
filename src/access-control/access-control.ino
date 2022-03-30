@@ -52,7 +52,7 @@ void setup()
 
     SPI.begin();
     mg996r.attach(SERVO_CONTROL_PIN);
-    mg996r.write(LOW);
+    mg996r.write(0);
     pinMode(SERVO_CONTROL_PIN, OUTPUT);
     return;
 }
@@ -72,11 +72,14 @@ void loop()
         #endif
 
         // 检查卡是否有效
-        if (checkCard(mfrc522.uid.uidByte, UID_SIZE, card_group, CARD_NUM))
+        if (checkCard(mfrc522.uid.uidByte, UID_SIZE, card_group, CARD_NUM)) {
             // 启动舵机开门
-            mg996r.write(80);
-        delay(3000);
-        mg996r.write(LOW);
+            mg996r.write(180);
+            delay(3000);
+            mg996r.write(0);
+        } else {
+            delay(3500);
+        }
         SPI_counter += 3;
 
     } else {
